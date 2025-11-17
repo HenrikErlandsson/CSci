@@ -1,9 +1,9 @@
-# Reasons for moving code out of larger codebases, by decade (1990s–2020s)
-*Cultural, practical, conceptual, and technological motivations that influenced real-world codebases.*
+# Reasons for moving code out of larger codebases (1990s–2020s)
+*Various motivations that influenced real-world codebases.*
 
 ---
 
-# **1990s — The Encapsulation & Component Era**
+# **1990s: The Encapsulation & Component Era**
 
 ### **1. Encapsulation and Information Hiding (OOP influence)**
 
@@ -44,7 +44,7 @@ Reason:
 
 Motivation:
 
-* wrap Windows API, Unix API, or 3rd-party libraries
+* wrap Windows API, 3rd-party libraries, etc.
 
 Reason:
 
@@ -52,9 +52,9 @@ Reason:
 
 ---
 
-# **2000s — The Framework & Layering Era**
+# **2000s: The Framework & Layering Era**
 
-### **1. Layered Architecture (N-tier design)**
+### **1. Layered Architecture**
 
 Motivation:
 
@@ -79,7 +79,7 @@ Reason:
 
 Motivation:
 
-* extract code so it can be unit tested
+* extract code so it can be unit tested (required by Crash-Fast)
 * separate pure logic from side effects
 
 Reason:
@@ -98,7 +98,7 @@ Reason:
 
 ---
 
-# **2010s — The Microservice & Dependency Explosion Era**
+# **2010s: The Microservice & Dependency Explosion Era**
 
 ### **1. Microservices / modular deployment**
 
@@ -111,16 +111,19 @@ Reason:
 
 > “Split code so different teams can deploy separately.”
 
+Some are still stuck in seeing this as a panacea. Modularity is always desired but from overflowing evidence every single day, deployment is not independent due to software churn, so it's a wish unfulfilled and not the solution.
 ### **2. Dependency-Driven Structure**
 
 Motivation:
 
 * npm, pip, NuGet culture
-* using packages for trivial tasks (left-pad phenomenon)
+* using packages for trivial tasks
 
 Reason:
 
 > “Move this code into a module because that’s how the package ecosystem works.”
+
+You have allowed your company to become a slave, hoping for ...what in return?
 
 ### **3. Code Organization Around Data Models**
 
@@ -133,6 +136,8 @@ Reason:
 
 > “Extract because it belongs to this bounded context.”
 
+The model will change, so now your core changes. Not desired. *What should your core be, instead?*
+
 ### **4. Avoiding God Classes by Sharding**
 
 Motivation:
@@ -143,9 +148,11 @@ Reason:
 
 > “The file is too large; split by topic.”
 
+Laughable. Identical to 1980s motivation from memory limits.
+
 ---
 
-# **2020s — The Cloud, Tooling, and Maintainability Era**
+# **2020s: The Cloud, Tooling, and Maintainability Era**
 
 ### **1. Tooling Pressure (IDE, linters, static analyzers)**
 
@@ -153,6 +160,8 @@ Motivation:
 
 * IDEs work better with smaller modules
 * code linters encourage splitting by “responsibility”
+
+Again - you're riding the bear. The bear is the third party. See also below.
 
 Reason:
 
@@ -202,6 +211,8 @@ Reason:
 
 > “This file is too big for comfort; split something out.”
 
+Laughable. Identical to 1980s motivation from memory limits.
+
 ---
 
 # **Summary:**
@@ -216,17 +227,15 @@ Historical reasons (1990s–2020s) revolve around:
 * "tech stack" (framework of the day)
 * team structure (for orgs)
 * evolving language/IDE limitations and fashions
+* nothing motivations.
 
 **None** revolve around:
 
 > **“Extract code because it is finished, stable, deterministic, and will not change again in a reasonable without providing backwards compatibility”**
 
-Pretty much all of these look like weak motivations, in hindsight. We have been adopting to the motivation of the day.
+These look like weak reasons, in hindsight. We have been adopting to the motivation of the day.
 
 API-first / contract-first motivation is always valid (for interfaces), and **do wrap** third-party interfaces. **But...**
 
 # If no architectures are about the code, which architecture *does*?
 *to be continued...* ;)
-
-
-Or anything else.
