@@ -237,5 +237,5 @@ These look like weak reasons, in hindsight. We have been adopting to the motivat
 
 API-first / contract-first motivation is always valid (for interfaces), and **do wrap** third-party interfaces. **But...**
 
-# If no architectures are about the code, which architecture *does*?
+# If (almost) no reasons are about quality of the compiled code, which architecture *does*?
 *to be continued...* ;)
